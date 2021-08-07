@@ -1,0 +1,85 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[threshold=1]{csquotes}
+\usepackage{xcolor}
+\usepackage{framed}
+
+
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  \graphicspath{{../images/}}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  \usepackage[dvips]{graphicx}
+  \graphicspath{{../images/}}
+  \DeclareGraphicsExtensions{.eps}
+\fi
+
+\begin{document}
+\onecolumn
+\title{ Customer Segmentation Using Mall Customer Data}
+
+\author{Prashun}
+
+\maketitle
+
+\section{\bf \large Abstract}---
+This is project based on the customer mall dataset having target column is spending score. Using k-means clustering to cluster the customer based on spending score, annual income etc. 
+%\keywords{datasets, prediction, crops, weather, prophet, dashboard}
+
+\vspace{8mm}
+\section{\bf \large Table of contents}
+\begin{itemize}
+\item Introduction
+\item Existing Method
+\item Proposed method with Architecture
+
+\item Implementation
+\item Conclusion
+
+\end{itemize}
+
+\section{\bf \large Introduction}
+
+\subsection{Dataset}
+
+The first five rows of the dataset:
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{Boat.png}
+  \caption{dataset.head()}
+  \label{fig 1}
+\end{figure}
+\newpage
+
+
+\section{\bf Existing Method}
+\subsection{k-means clustering}
+Clustering algorithm is a technique that assists customer segmentation which is a process of classifying similar customers into the same segment. Clustering algorithm helps to better understand customers, in terms of both static demographics and dynamic behaviors. Customer with comparable characteristics often interact with the business similarly, thus business can benefit from this technique by creating tailored marketing strategy for each segment.
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{k-means.png}
+  \caption{K-means clustering}
+  \label{fig 2}
+\end{figure}
+\section{\bf \large Implementation}
+I am using k-means clustering algorithm to cluster the customer based on their income and spending score. There are 5 cluster what we get at the final. To evaluate the model, used the inertia value as evaluation metrics.
+\par i am using elbow method to find the optimal k value.
+\section{\bf Conclusion}
+Finally, based on our machine learning technique we may deduce that to increase the profits of the mall, the mall authorities should target people belonging to green cluster and red cluster .
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{k-means2.png}
+  \caption{}
+  \label{fig 3}
+\end{figure}
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem   {}  Latex tutorial . https://latex-tutorial.com/tutorials/figures/
+
+\bibitem {} K-means clustering https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+
+\end{thebibliography}
+
+\end{document}
